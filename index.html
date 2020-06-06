@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Movie Project</title>
+</head>
+<body>
+    <main>
+      <!-- Hero image container and nav bar -->
+      
+      <section id="hero-image" class="hero-image">
+          <header class="header">
+            <div class="logo"><a href="">WEBFLIX</a></div>
+            <nav class="nav-bar"> 
+              <ul class="nav-list">
+                <li class="list-item"><a href="">Home</a></li>
+                <li class="list-item"><a href="">Movies</a></li>
+                <li class="list-item"><a href="">Series</a></li>
+                <li class="list-item"><a href="">My List</a></li> 
+                <li><img class="list-item" src="images/bell icon.svg" alt="bell-icon"> </li>
+              </ul>
+            </nav>
+          </header>
+          
+          <div class="container">
+            <!-- left side of hero section -->
+            <section class="current-movie">
+              <span><img class="star" src="/images/star-icon.svg" alt=""></span>  
+              <span id="rating"> 6.6 </span>
+              <span id="genres" class="rating-and-genre">Action | Science Fiction | Adventure</span>
+              <h1 id="hero-title" class="hero-title">Oblivion</h1>
+              <section class="blurb">
+                <p id="movie-blurb" class="movie-blurb">Jack Harper is one of the last few drone repairmen stationed on Earth.  Part of a massive operation to extract vital resources after decades of war with a terrifying threat known as the Scavs, Jack’s mission is nearly complete.  His existence is brought crashing down when he rescues a beautiful  stranger from a downed spacecraft.  Her arrival triggers a chain of events that  forces him to question everything he knows and puts the fate of humanity in his hands.
+                </p>
+            </section>
+              <a class="watch-trailer-container" href="#bottom-video-player">
+                <div class="watch-trailer">
+                  <img src="/images/Polygon 1.svg" alt="">
+                  <span id="button-text" >WATCH TRAILER</span>
+                </div>
+              </a>
+            </section>
+            <!-- right side of hero section -->
+            <section class="search-movie">
+              <h4>Search for a Movie</h4>
+              <div class="search-box">
+                <img class="spy-glass" src="/images/spyglass-icon.svg" alt="">
+                <form  autocomplete="off" id=form_id >
+                  <input type="text" id="movie-input">
+                  
+                  <button id="submit-button" type="submit">Submit</button>
+               
+                </form>
+            </div>
+            </section>
+          </div>
+           
+      </section>
+
+      <!-- Trends now etc menu bar -->
+      <section >
+        <ul class="menu-bar-1">
+          <li class="no-shrink"> <a class="active" href="">Trends Now</a></li>
+          <li class="no-shrink"><img class="not-active" src="/images/flame.svg" alt="">
+            <a class="not-active" href="">Popular</a></li>
+            <li class="no-shrink"><img class="not-active"src="/images/star.svg" alt="">
+              <a class="not-active" href="">Premiers</a></li>
+          <li class="no-shrink"><img class="not-active" src="/images/plus.svg" alt="">
+            <a class="not-active" href="">Recently Added</a></li>
+        </ul>
+      </section>
+
+      <!-- Grey seperating line -->
+      <div class="grey-line"></div>
+
+      <!-- Genre button bar  -->
+      <div class="genre-flex-container">
+        <a class="active-genre-button" href="">
+          <div class="active-genre">
+            <span id="genre-button-text" >Action</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Adventure</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Animation</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Biography</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Crime</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Row 1 of the movie posters should be dynamic with channge of Genre -->
+      <section class="poster-row-flexbox">
+
+        <div id= "poster-1" class="poster">
+          <img id="poster-image-1" class="poster-image" src="" alt="">
+          <h2 id="poster-1-title" class="poster-title" >Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-2" class="poster">
+          <img id="poster-image-2" class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 id="poster-2-title" class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-3" class="poster">
+          <img id="poster-image-3" class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 id="poster-3-title" class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-4" class="poster">
+          <img id="poster-image-4" class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 id="poster-4-title"class="poster-title" >Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Movies, series ect menu bar -->
+      <section >
+        <ul class="menu-bar-1">
+          <li class="no-shrink"> <a class="active" href="">Movies</a></li>
+          <li class="no-shrink"><img class="not-active" src="" alt="">
+            <a class="not-active" href="">Series</a></li>
+            <li class="no-shrink"><img class="not-active"src="" alt="">
+              <a class="not-active" href="">Original Series</a></li>
+          <li class="no-shrink"><img class="not-active" src="/images/spyglass-icon.svg" alt="">
+            <a class="not-active" href="">Search</a></li>
+        </ul>
+      </section>
+
+      <!-- Grey seperating line -->
+      <div class="grey-line"></div>
+
+      <!-- The second Genre button bar -->
+     
+      <div class="genre-flex-container">
+        <a class="active-genre-button" href="">
+          <div class="active-genre">
+            <span id="genre-button-text" >Action</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Adventure</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Animation</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Biography</span>
+          </div>
+        </a>
+        <a class="not-active-genre-button" href="">
+          <div class="not-active-genre">
+            <span id="genre-button-text" >Crime</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Section 2  of the movie posters should be dynamic with channge of Genre -->
+      <section class="poster-row-flexbox">
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+      </section>
+   
+      <!-- row 3 of the posters -->
+
+      <section class="poster-row-flexbox">
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>6.6</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+
+        <div id= "poster-1" class="poster">
+          <img class="poster-image" src="/images/deadpool2@2x.png" alt="">
+          <h2 class="poster-title">Deadpool</h2>
+          <div class="poster-date-rating-flexbox">
+            <h3>2018</h3>
+            <div>
+              <img src="/images/poster-star.svg" alt="">
+              <span>5.5</span>
+          </div>
+          </div>
+        </div>
+      </section>
+      <div id="bottom-video-player"class="video-container">
+        <iframe id="movieTrailer" width="1440" height="900" src="https://www.youtube.com/embed/UsjdRsrR6cs?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      
+
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>
