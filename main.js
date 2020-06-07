@@ -1,22 +1,23 @@
 const apiKey = '259f94cd5d495f4911d73754b6956f7e';
 
 //HTML Elements
+// Search box
 const movieInput = document.getElementById('movie-input');
 const submitButton = document.getElementById('submit-button');
+// hero movie area
 const movieDescription = document.getElementById('movie-blurb');
-const coverPicture = document.getElementById('poster-image')
-const movieTrailer = document.getElementById('movieTrailer')
-const heroMovieTitle = document.getElementById('hero-title')
+const heroMovieTitle = document.getElementById('hero-title');
 const heroImage = document.getElementById('hero-image');
 const heroMovieRating = document.getElementById('rating');
 const genres = document.getElementById('genres');
-const poster1Src = document.getElementById('poster-image-1');
-const poster2Src = document.getElementById('poster-image-2');
-const poster3Src = document.getElementById('poster-image-3');
-const poster4Src = document.getElementById('poster-image-4');
-const posterTitles = document.getElementsByClassName('poster-title')
-const posterSrcList = [poster1Src, poster2Src, poster3Src, poster4Src];
-let posterImages = document.getElementsByClassName('poster-image');
+const coverPicture = document.getElementById('poster-image');
+// Smaller movie images and info throughout the page
+const posterTitles = document.getElementsByClassName('poster-title');
+const posterImages = document.getElementsByClassName('poster-image');
+const posterDate = document.getElementsByClassName('poster-date');
+const posterRating = document.getElementsByClassName('poster-rating');
+// Embedded youtube video at the bottom of the page
+const movieTrailer = document.getElementById('movieTrailer');
 // Function to execute when Submit is clicked
 function getTextInput(){
     submitButton.onclick = function() {  
@@ -59,21 +60,42 @@ async function getTrendingList(){
         const response = await fetch(movieListQuery);
         if(response.ok){
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
+            // console.log(jsonResponse);
+            // holds the json resonse of the results
             const results = jsonResponse.results;
+            console.log(results);
             // holds a list of all the trending titles
             const titleList = []
             results.forEach(element => titleList.push(element.title));
-            console.log(titleList);
+            // console.log(titleList);
+            // loop to add the titles in titleList to the unnerHTML of elements with the class poster-titles held in the posterTitles variable
             for(let i = 0; i < posterTitles.length; i++){
                 posterTitles[i].innerHTML = titleList[i]}
-            // create a list of full poster URLS
+            // create an empty list to hold poster image URL's
             const posterUrlList = []
+            // loop through the results and push the beginning part of the URL along with the result URL to the list
             results.forEach(element => posterUrlList.push(base_url + file_size + element.poster_path));
             // console.log(posterUrlList);
+            // for loop to add the poster URL's the the src attribute of the poster-images class elements held in the variable posterImages 
             for(let i = 0; i < posterImages.length; i++){
                 posterImages[i].src = posterUrlList[i]
             }
+            // get the poster ratings
+            const posterRatingsList = [];
+            results.forEach(element => posterRatingsList.push(element.vote_average));
+            // console.log(posterRatingsList);
+            for(let i =0; i < posterRating.length; i++){
+            posterRating[i].innerHTML = posterRatingsList[i];
+            };
+        
+            //get the poster release date
+            const posterDateList = [];
+            // the slich method takes the year only from the result and pushes it to the list
+            results.forEach(element => posterDateList.push(element.release_date.slice(0, 4)));
+            for(let i =0; i < posterDate.length; i++){
+                posterDate[i].innerHTML = posterDateList[i];
+            }
+            // console.log(posterDateList)
 
         }
     }catch(error){
