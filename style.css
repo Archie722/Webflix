@@ -25,7 +25,8 @@ main {
     /* max-width: 850px; */
     max-width: 1920px;
     min-width: 1400px;
-    height: 4236px;
+    /* height: 4236px; */
+    height: auto;
     margin: auto;
 }
 .search-results-height{
@@ -271,12 +272,15 @@ img.not-active{
     width: 276px;
     height: 406px;
     background-color: #FF0000;
+    cursor: pointer;
+}
+.poster-container{
+    width: 276px;
 }
 .poster-image-large{
     width: 448px;
     height: 660px;
-    padding-right: 7em;
-    
+    padding-right: 7em;   
 }
 .poster{
     width: 406px;

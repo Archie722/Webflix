@@ -18,6 +18,19 @@ const posterDate = document.getElementsByClassName('poster-date');
 const posterRating = document.getElementsByClassName('poster-rating');
 // Embedded youtube video at the bottom of the page
 const movieTrailer = document.getElementById('movieTrailer');
+const poster1 = document.getElementById('poster-image-1');
+const poster2 = document.getElementById('poster-image-2');
+const poster3 = document.getElementById('poster-image-3');
+const poster4 = document.getElementById('poster-image-4');
+const poster5 = document.getElementById('poster-image-5');
+const poster6 = document.getElementById('poster-image-6');
+const poster7 = document.getElementById('poster-image-7');
+const poster8 = document.getElementById('poster-image-8');
+const poster9 = document.getElementById('poster-image-9');
+const poster10 = document.getElementById('poster-image-10');
+const poster11 = document.getElementById('poster-image-11');
+const poster12 = document.getElementById('poster-image-12');
+
 // Function to execute when Submit is clicked
 function getTextInput(){
     submitButton.onclick = function() {  
@@ -96,7 +109,74 @@ async function getTrendingList(){
                 posterDate[i].innerHTML = posterDateList[i];
             }
             // console.log(posterDateList)
-
+            const posterObject1 = results[0];
+            const posterObject2 = results[1];
+            const posterObject3 = results[2];
+            const posterObject4 = results[3];
+            const posterObject5 = results[4];
+            const posterObject6 = results[5];
+            const posterObject7 = results[6];
+            const posterObject8 = results[7];
+            const posterObject9 = results[8];
+            const posterObject10 = results[9];
+            const posterObject11= results[10];
+            const posterObject12 = results[11];
+            function posterSearch(posterObject) {
+                renderDescription(posterObject)
+                renderHeroMovieTitle(posterObject)
+                renderHeroMovieStars(posterObject)
+                getMovieImages(posterObject)
+                getMovieTrailer(posterObject)
+                getMovieInfo(posterObject)
+            }
+            poster1.onclick = function() {  
+                posterSearch(posterObject1);
+                heroImage.scrollIntoView();
+            }
+            poster2.onclick = function() {  
+                posterSearch(posterObject2);
+                heroImage.scrollIntoView();
+            }
+            poster3.onclick = function() {  
+                posterSearch(posterObject3);
+                heroImage.scrollIntoView();
+            }
+            poster4.onclick = function() {  
+                posterSearch(posterObject4);
+                heroImage.scrollIntoView();
+            }
+            poster5.onclick = function() {  
+                posterSearch(posterObject5);
+                heroImage.scrollIntoView();
+            }
+            poster6.onclick = function() {  
+                posterSearch(posterObject6);
+                heroImage.scrollIntoView();
+            }
+            poster7.onclick = function() {  
+                posterSearch(posterObject7);
+                heroImage.scrollIntoView();
+            }
+            poster8.onclick = function() {  
+                posterSearch(posterObject8);
+                heroImage.scrollIntoView();
+            }
+            poster9.onclick = function() {  
+                posterSearch(posterObject9);
+                heroImage.scrollIntoView();
+            }
+            poster10.onclick = function() {  
+                posterSearch(posterObject10);
+                heroImage.scrollIntoView();
+            }
+            poster11.onclick = function() {  
+                posterSearch(posterObject11);
+                heroImage.scrollIntoView();
+            }
+            poster12.onclick = function() {  
+                posterSearch(posterObject12);
+                heroImage.scrollIntoView();
+            }
         }
     }catch(error){
         console.log(error);
