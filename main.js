@@ -30,7 +30,14 @@ const poster9 = document.getElementById('poster-image-9');
 const poster10 = document.getElementById('poster-image-10');
 const poster11 = document.getElementById('poster-image-11');
 const poster12 = document.getElementById('poster-image-12');
-
+const poster13 = document.getElementById('poster-image-13');
+const poster14= document.getElementById('poster-image-14');
+const poster15= document.getElementById('poster-image-15');
+const poster16= document.getElementById('poster-image-16');
+const poster17= document.getElementById('poster-image-17');
+const poster18= document.getElementById('poster-image-18');
+const poster19= document.getElementById('poster-image-19');
+const poster20= document.getElementById('poster-image-20');
 // Function to execute when Submit is clicked
 function getTextInput(){
     submitButton.onclick = function() {  
@@ -121,6 +128,14 @@ async function getTrendingList(){
             const posterObject10 = results[9];
             const posterObject11= results[10];
             const posterObject12 = results[11];
+            const posterObject13 = results[12];
+            const posterObject14= results[13];
+            const posterObject15= results[14];
+            const posterObject16= results[15];
+            const posterObject17= results[16];
+            const posterObject18= results[17];
+            const posterObject19= results[18];
+            const posterObject20= results[19];
             function posterSearch(posterObject) {
                 renderDescription(posterObject)
                 renderHeroMovieTitle(posterObject)
@@ -128,55 +143,72 @@ async function getTrendingList(){
                 getMovieImages(posterObject)
                 getMovieTrailer(posterObject)
                 getMovieInfo(posterObject)
+                heroImage.scrollIntoView();
             }
             poster1.onclick = function() {  
                 posterSearch(posterObject1);
-                heroImage.scrollIntoView();
             }
             poster2.onclick = function() {  
                 posterSearch(posterObject2);
-                heroImage.scrollIntoView();
             }
             poster3.onclick = function() {  
                 posterSearch(posterObject3);
-                heroImage.scrollIntoView();
             }
             poster4.onclick = function() {  
                 posterSearch(posterObject4);
-                heroImage.scrollIntoView();
             }
             poster5.onclick = function() {  
                 posterSearch(posterObject5);
-                heroImage.scrollIntoView();
             }
             poster6.onclick = function() {  
                 posterSearch(posterObject6);
-                heroImage.scrollIntoView();
             }
             poster7.onclick = function() {  
                 posterSearch(posterObject7);
-                heroImage.scrollIntoView();
             }
             poster8.onclick = function() {  
                 posterSearch(posterObject8);
-                heroImage.scrollIntoView();
             }
             poster9.onclick = function() {  
                 posterSearch(posterObject9);
-                heroImage.scrollIntoView();
             }
             poster10.onclick = function() {  
                 posterSearch(posterObject10);
-                heroImage.scrollIntoView();
             }
             poster11.onclick = function() {  
                 posterSearch(posterObject11);
-                heroImage.scrollIntoView();
             }
             poster12.onclick = function() {  
                 posterSearch(posterObject12);
-                heroImage.scrollIntoView();
             }
+            poster13.onclick = function() {  
+                posterSearch(posterObject13);
+            }
+            poster14.onclick = function() {  
+                posterSearch(posterObject14);
+            }
+            poster15.onclick = function() {  
+                posterSearch(posterObject15);
+            }
+            poster16.onclick = function() {  
+                posterSearch(posterObject16);
+            }
+            poster17.onclick = function() {  
+                posterSearch(posterObject17);
+            }
+            poster18.onclick = function() {  
+                posterSearch(posterObject18);
+            }
+            poster19.onclick = function() {  
+                posterSearch(posterObject19);
+            }
+            poster20.onclick = function() {  
+                posterSearch(posterObject20);
+            }
+            const posterObjectList = [posterObject1, posterObject2, posterObject3, posterObject4, posterObject5, posterObject6, posterObject7, posterObject8, posterObject9, posterObject10, posterObject11, posterObject12, posterObject13, posterObject14, posterObject15, posterObject16, posterObject17, posterObject18, posterObject19, posterObject20];
+            const randomMovie = posterObjectList[Math.floor(Math.random() * posterObjectList.length)];
+            posterSearch(randomMovie);
+
         }
     }catch(error){
         console.log(error);

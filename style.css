@@ -37,11 +37,11 @@ main.movie-info-height{
 }
 .hero-image {
     height: 838px;
-    background:  
+    /* background:   */
     /* set a black gradient over the top and bottom of the image (use cssgradient.io to try values */ 
-    linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,1) 100%),
+    /* linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,1) 100%), */
     /* bottom, image */
-    url(images/backdrop.jpg); 
+    /* url(images/backdrop.jpg);  */
     background-size: cover;
 }
 .header {
@@ -194,6 +194,8 @@ h4.search-results-h4{
     border-radius: 80px;
     background-color: #FF0000;
     outline: none;
+    border-color: rgb(73, 18, 18);
+    cursor: pointer;
     color: white;
     font-family: Helvetica;
 }
@@ -266,7 +268,9 @@ img.not-active{
 .poster-row-flexbox {
     display:flex;
     justify-content: space-evenly;
-    padding-bottom: 4em
+    /* justify-content: space-around; */
+    padding-bottom: 4em;
+    padding-left: 7em;
 }
 .poster-image{
     width: 276px;
@@ -305,7 +309,7 @@ img.not-active{
     color: #F1C20F;
     opacity: 0.5;
     padding-left: 15px;
-    padding-right: 2.5em;
+    /* padding-right: 2.5em; */
 }
 .video-container{
     display: flex;
